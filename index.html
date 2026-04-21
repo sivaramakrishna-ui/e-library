@@ -211,40 +211,74 @@
 
 <script>
     const resources = [
-        // --- CURRICULUM SUPPORT ---
-        { title: "CBSE Manuals", desc: "Official academic manuals for secondary education.", cat: "Curriculum", url: "https://cbseacademic.nic.in/manual.html" },
-        { title: "CBSE Curriculum 2023", desc: "Current curriculum and syllabus updates.", cat: "Curriculum", url: "https://cbseacademic.nic.in/curriculum_2023.html" },
-        { title: "CBSE Circulars", desc: "Latest notifications and academic circulars.", cat: "Curriculum", url: "https://cbseacademic.nic.in/circulars.html" },
-        { title: "NCERT Text Books", desc: "Digital copies of primary and secondary textbooks.", cat: "Curriculum", url: "https://ncert.nic.in/textbook.php" },
-        { title: "NEP Policy", desc: "National Education Policy final document.", cat: "Curriculum", url: "https://www.education.gov.in/sites/upload_files/mhrd/files/NEP_Final_English_0.pdf" },
-        { title: "NIPUN BHARAT", desc: "National initiative for proficiency in reading and numeracy.", cat: "Curriculum", url: "https://nipunbharat.education.gov.in/" },
+        // --- CURRICULUM SUPPORT --- [cite: 5]
+        { title: "CBSE Manuals", desc: "Official academic manuals for secondary education.", cat: "Curriculum", url: "https://cbseacademic.nic.in/manual.html" }, // [cite: 6]
+        { title: "CBSE Curriculum", desc: "Access the current academic curriculum and syllabus.", cat: "Curriculum", url: "https://cbseacademic.nic.in/curriculum_2023.html" }, // [cite: 8]
+        { title: "CBSE Circulars", desc: "Stay updated with the latest notifications and circulars.", cat: "Curriculum", url: "https://cbseacademic.nic.in/circulars.html" }, // [cite: 9]
+        { title: "NCERT Text Books", desc: "Digital copies of all NCERT primary and secondary textbooks.", cat: "Curriculum", url: "https://ncert.nic.in/textbook.php" }, // [cite: 10]
+        { title: "NEP Policy", desc: "National Education Policy final document (English).", cat: "Curriculum", url: "https://www.education.gov.in/sites/upload_files/mhrd/files/NEP_Final_English_0.pdf" }, // [cite: 11, 12]
+        { title: "NIPUN BHARAT", desc: "National initiative for proficiency in reading and numeracy.", cat: "Curriculum", url: "https://nipunbharat.education.gov.in/" }, // [cite: 13]
+        { title: "CBSE Teacher Resources", desc: "CBE-focused resources and training materials for educators.", cat: "Curriculum", url: "https://cbseacademic.nic.in/cbe/teacher-resources.html" }, // [cite: 15]
+        { title: "NCERT Teacher Materials", desc: "Department of Education in Science and Mathematics materials.", cat: "Curriculum", url: "https://ncert.nic.in/desm/material-for-teachers.php" }, // [cite: 16]
 
-        // --- STORY TIME / READING ---
-        { title: "Storyline Online", desc: "Children's literacy resource with celebrated actors reading aloud.", cat: "Story Time", url: "https://www.storylineonline.net/" },
-        { title: "StoryMirror", desc: "Platform for creative writing and reading short stories.", cat: "Story Time", url: "https://storymirror.com" },
-        { title: "Storyweaver", desc: "Multilingual stories for children to read and enjoy.", cat: "Story Time", url: "https://storyweaver.org.in/en/" },
-        { title: "Hindi Story Time", desc: "A collection of motivational and fun stories in Hindi.", cat: "Story Time", url: "https://motivationalstoryinhindi.com/story-for-kids-in-hindi/" },
-        { title: "e-Pustakalay", desc: "Extensive library for Hindi digital books.", cat: "Story Time", url: "https://epustakalay.com/" },
+        // --- STORY TIME / READING FOR FUN --- [cite: 17]
+        { title: "Storyline Online", desc: "Celebrated actors reading children’s books aloud.", cat: "Story Time", url: "https://www.storylineonline.net/" }, // [cite: 18]
+        { title: "StoryMirror", desc: "Digital platform for creative writing and short stories.", cat: "Story Time", url: "https://storymirror.com" }, // [cite: 19]
+        { title: "Storynory", desc: "Free audio stories for children including myths and fairy tales.", cat: "Story Time", url: "https://www.storynory.com/" }, // [cite: 20]
+        { title: "Storyweaver", desc: "A massive multilingual library for young readers.", cat: "Story Time", url: "https://storyweaver.org.in/en/" }, // [cite: 21]
+        { title: "World Stories", desc: "Traditional stories from around the world in multiple languages.", cat: "Story Time", url: "https://worldstories.org.uk/" }, // [cite: 22]
+        { title: "BookBub Short Stories", desc: "Free short stories across many different genres.", cat: "Story Time", url: "https://www.bookbub.com/blog/free-short-stories-online" }, // [cite: 23]
 
-        // --- REFERENCE ---
-        { title: "Encyclopedia Britannica", desc: "World-renowned source for facts and reference materials.", cat: "Reference", url: "https://www.britannica.com/" },
-        { title: "World History Encyclopedia", desc: "Resource for ancient, medieval, and modern history.", cat: "Reference", url: "https://www.worldhistory.org/" },
-        { title: "Biography Online", desc: "Profiles of influential people throughout history.", cat: "Reference", url: "https://www.biographyonline.net/" },
-        { title: "Oxford Owl", desc: "Free ebooks and support for reading and math.", cat: "Reference", url: "https://www.oxfordowl.co.uk/" },
+        // --- HINDI STORY TIME --- [cite: 24]
+        { title: "Abhivyakti Hindi", desc: "A comprehensive Hindi literary web magazine.", cat: "Story Time", url: "http://www.abhivyakti-hindi.org" }, // [cite: 25]
+        { title: "Storyweaver (Hindi)", desc: "A curated collection of children's stories in Hindi.", cat: "Story Time", url: "https://storyweaver.org.in/en/stories?language=Hindi&sort=Ratings" }, // [cite: 26]
+        { title: "e-Pustakalay", desc: "One of the largest portals for Hindi digital books.", cat: "Story Time", url: "https://epustakalay.com/" }, // [cite: 27]
+        { title: "Motivational Hindi Stories", desc: "Inspirational stories tailored for kids in Hindi.", cat: "Story Time", url: "https://motivationalstoryinhindi.com/story-for-kids-in-hindi/" }, // [cite: 28]
 
-        // --- TRAINING ---
-        { title: "DIKSHA Portal", desc: "National training and resource portal for teachers.", cat: "Training", url: "https://diksha.gov.in/index.html" },
-        { title: "NISHTHA Training", desc: "Teacher training for holistic development.", cat: "Training", url: "https://www.india.gov.in/spotlight/nishtha" },
-        { title: "SWAYAM", desc: "Online courses and certifications for various disciplines.", cat: "Training", url: "https://swayam.gov.in/explorer" },
+        // --- REFERENCE BOOKS --- [cite: 29]
+        { title: "Encyclopedia.com", desc: "Reference entries from over 100 trusted sources.", cat: "Reference", url: "https://www.encyclopedia.com/" }, // [cite: 30]
+        { title: "Britannica", desc: "World-renowned source for facts and general knowledge.", cat: "Reference", url: "https://www.britannica.com/" }, // [cite: 31]
+        { title: "World History", desc: "The world's most-read history encyclopedia.", cat: "Reference", url: "https://www.worldhistory.org/" }, // [cite: 32]
+        { title: "TumbleMobile", desc: "Mobile-friendly reading resources for students.", cat: "Reference", url: "https://www.tumblemobile.com" }, // [cite: 33]
+        { title: "Oxford Owl", desc: "Award-winning website to help children learn at home.", cat: "Reference", url: "https://www.oxfordowl.co.uk/" }, // [cite: 34]
+        { title: "Starfall", desc: "Specializing in reading and phonics for younger children.", cat: "Reference", url: "https://www.starfall.com" }, // [cite: 35]
+        { title: "Biography Online", desc: "Biographies of influential figures throughout history.", cat: "Reference", url: "https://www.biographyonline.net/" }, // [cite: 36]
+        { title: "History.com", desc: "Comprehensive historical facts and educational videos.", cat: "Reference", url: "https://www.history.com" }, // [cite: 37]
+        { title: "Online Essays", desc: "Reference material and academic essay support.", cat: "Reference", url: "https://onlineessays.com/" }, // [cite: 38]
+        { title: "Goodreads", desc: "Discover new books and track your reading progress.", cat: "Reference", url: "https://www.goodreads.com" }, // [cite: 39]
 
-        // --- NEWS & MAGAZINES ---
-        { title: "The Hindu", desc: "Digital edition of The Hindu newspaper.", cat: "News", url: "https://www.thehindu.com/" },
-        { title: "Indian Express", desc: "Latest news and investigative journalism.", cat: "News", url: "https://indianexpress.com/" },
-        { title: "National Geographic", desc: "Science, nature, and geography magazine.", cat: "News", url: "https://www.nationalgeographic.com/magazine/" },
-        { title: "India Today", desc: "Weekly news magazine and current affairs.", cat: "News", url: "https://www.indiatoday.in" },
+        // --- TRAINING PORTALS --- [cite: 40]
+        { title: "DIKSHA", desc: "National digital infrastructure for school education.", cat: "Training", url: "https://diksha.gov.in/index.html" }, // [cite: 41]
+        { title: "NISHTHA", desc: "National initiative for school heads and teachers' training.", cat: "Training", url: "https://www.india.gov.in/spotlight/nishtha" }, // [cite: 42]
+        { title: "CBSE Training", desc: "Portal for teacher training and capacity building.", cat: "Training", url: "https://cbseit.in/cbse/training/" }, // [cite: 43]
+        { title: "SWAYAM", desc: "Online courses for skills and academic advancement.", cat: "Training", url: "https://swayam.gov.in/explorer" }, // [cite: 44]
 
-        // --- PAID RESOURCES ---
-        { title: "British Council Library", desc: "Access to world-class digital learning materials.", cat: "Paid", url: "https://www.britishcouncil.in/library/digital-library" }
+        // --- NEWS --- [cite: 45]
+        { title: "Times of India", desc: "India's leading English daily newspaper.", cat: "News", url: "https://timesofindia.indiatimes.com/" }, // [cite: 47]
+        { title: "Hindustan Times", desc: "Comprehensive coverage of Indian and global news.", cat: "News", url: "https://www.hindustantimes.com/" }, // [cite: 48]
+        { title: "Indian Express", desc: "Independent and investigative journalism.", cat: "News", url: "https://indianexpress.com/" }, // [cite: 49]
+        { title: "The Hindu", desc: "Respected for high standards of journalism.", cat: "News", url: "https://www.thehindu.com/" }, // [cite: 50]
+        { title: "Navbharat Times", desc: "Top Hindi newspaper for current events.", cat: "News", url: "https://navbharattimes.indiatimes.com/" }, // [cite: 51]
+        { title: "Hindustan ePaper", desc: "Hindi digital paper with national coverage.", cat: "News", url: "http://epaper.livehindustan.com/" }, // [cite: 52]
+        { title: "The Statesman", desc: "One of India's oldest and most respected newspapers.", cat: "News", url: "https://epaper.thestatesman.com/" }, // [cite: 53]
+        { title: "Dainik Jagran", desc: "Widely read Hindi daily for local and global news.", cat: "News", url: "https://www.jagran.com/" }, // [cite: 54]
+
+        // --- MAGAZINES --- [cite: 55]
+        { title: "India Today", desc: "Weekly news magazine for current affairs.", cat: "News", url: "https://www.indiatoday.in" }, // [cite: 56]
+        { title: "The Week", desc: "Award-winning weekly Indian news magazine.", cat: "News", url: "https://www.theweek.in" }, // [cite: 57]
+        { title: "Education World", desc: "Portal dedicated to educators and education news.", cat: "News", url: "https://www.educationworld.in/" }, // [cite: 58]
+        { title: "Reader's Digest", desc: "Family-friendly magazine with human-interest stories.", cat: "News", url: "https://www.readersdigest.co.in/" }, // [cite: 59]
+        { title: "Brainfeed", desc: "Educational magazine for children and K-12 leaders.", cat: "News", url: "https://brainfeedmagazine.com/" }, // [cite: 60]
+        { title: "National Geographic", desc: "World-class stories in science and geography.", cat: "News", url: "https://www.nationalgeographic.com/magazine/" }, // [cite: 61]
+        { title: "Competition Review", desc: "Resource for students preparing for exams.", cat: "News", url: "https://www.competitionreview.in/" }, // [cite: 62]
+        { title: "Discover Magazine", desc: "Science news and latest research developments.", cat: "News", url: "http://discovermagazine.com/" }, // [cite: 63]
+        { title: "Femina", desc: "India's first and largest women's magazine.", cat: "News", url: "https://www.femina.in/" }, // [cite: 64]
+        { title: "Frontline", desc: "Deep-dive analysis on politics and social issues.", cat: "News", url: "https://frontline.thehindu.com/" }, // [cite: 65]
+
+        // --- PAID RESOURCES --- [cite: 66]
+        { title: "British Council", desc: "Access the premier digital library for UK culture.", cat: "Paid", url: "https://www.britishcouncil.in/library/digital-library" }, // [cite: 67]
+        { title: "Cambridge Books", desc: "Official bookstore for Cambridge academic titles.", cat: "Paid", url: "https://www.cambridgebookshop.co.uk/" }, // [cite: 68]
+        { title: "Oxford Press", desc: "Global academic and education resources.", cat: "Paid", url: "https://global.oup.com/education/?region=international" } // [cite: 69]
     ];
 
     function getCatColor(cat) {
@@ -254,6 +288,7 @@
             case 'Reference': return '#2563eb';
             case 'Training': return '#db2777';
             case 'News': return '#d97706';
+            case 'Paid': return '#ef4444';
             default: return '#64748b';
         }
     }
@@ -289,13 +324,13 @@
         const term = document.getElementById('searchInput').value.toLowerCase();
         const filtered = resources.filter(res => 
             res.title.toLowerCase().includes(term) || 
-            res.cat.toLowerCase().includes(term)
+            res.cat.toLowerCase().includes(term) ||
+            res.desc.toLowerCase().includes(term)
         );
         displayResources(filtered);
     }
 
     displayResources(resources);
 </script>
-
 </body>
 </html>
