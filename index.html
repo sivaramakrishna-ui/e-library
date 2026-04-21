@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Resource Centre | BBPS Simhadri</title>
+    <title>Digital Resource Centre | BBPS</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -27,7 +27,6 @@
             scroll-behavior: smooth;
         }
 
-        /* --- Header with Highlighted Logo --- */
         header {
             padding: 4rem 1rem 3rem;
             text-align: center;
@@ -44,7 +43,6 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Golden Halo Effect */
         .school-logo-container::before {
             content: '';
             position: absolute;
@@ -80,7 +78,6 @@
         h1 { font-size: 2.8rem; margin: 10px 0; color: var(--primary); font-weight: 700; }
         .subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem; }
 
-        /* --- Search & Filters --- */
         .search-container { margin: 0 auto 2rem; max-width: 600px; padding: 0 20px; }
 
         #searchInput {
@@ -118,7 +115,6 @@
             transform: translateY(-2px);
         }
 
-        /* --- Grid & Cards --- */
         .container { max-width: 1200px; margin: 3rem auto; padding: 0 20px; }
         
         .library-grid {
@@ -154,8 +150,8 @@
             letter-spacing: 0.5px;
         }
 
-        .card h3 { margin: 0 0 12px; color: var(--primary); font-size: 1.4rem; }
-        .card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; flex-grow: 1; margin-bottom: 1.5rem; }
+        .card h3 { margin: 0 0 12px; color: var(--primary); font-size: 1.2rem; min-height: 3rem; display: flex; align-items: center; }
+        .card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; flex-grow: 1; margin-bottom: 1.5rem; }
         
         .visit-btn {
             text-decoration: none;
@@ -176,7 +172,7 @@
             background: white;
             border-top: 1px solid #e2e8f0;
             color: var(--text-muted);
-            margin-top: 5rem;
+            margin-top: 50px;
         }
     </style>
 </head>
@@ -184,104 +180,103 @@
 
 <header>
     <div class="school-logo-container">
-        <img src="school_logo.png" alt="BBPS Logo" class="school-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Bal_Bharati_Public_School_logo.png" alt="BBPS Logo" class="school-logo">
     </div>
     
     <h1>Digital Resource Centre</h1>
-    <p class="subtitle">Official Open-Access Portal for BBPS Simhadri</p>
+    <p class="subtitle">Official Annexure I E-Library Portal [cite: 7]</p>
 
     <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search resources, magazines, or topics..." onkeyup="filterLibrary()">
+        <input type="text" id="searchInput" placeholder="Search for books, circulars, or newspapers..." onkeyup="filterLibrary()">
     </div>
 
     <div class="filter-menu">
         <button class="filter-btn active" onclick="filterCategory('all', this)">All Resources</button>
-        <button class="filter-btn" onclick="filterCategory('student', this)">Student Corner</button>
-        <button class="filter-btn" onclick="filterCategory('teacher', this)">Teacher's Hub</button>
-        <button class="filter-btn" onclick="filterCategory('magazines', this)">Magazines</button>
-        <button class="filter-btn" onclick="filterCategory('exams', this)">Exams</button>
+        <button class="filter-btn" onclick="filterCategory('Curriculum', this)">Curriculum</button>
+        <button class="filter-btn" onclick="filterCategory('Story Time', this)">Story Time</button>
+        <button class="filter-btn" onclick="filterCategory('Reference', this)">Reference</button>
+        <button class="filter-btn" onclick="filterCategory('Training', this)">Teacher Training</button>
+        <button class="filter-btn" onclick="filterCategory('News', this)">News & Magazines</button>
     </div>
 </header>
 
 <div class="container">
-    <div class="library-grid" id="libraryGrid">
-        </div>
+    <div class="library-grid" id="libraryGrid"></div>
 </div>
 
 <footer>
-    <p>&copy; 2026 BBPS Simhadri | Developed for Excellence</p>
-    <p style="font-size: 0.8rem; margin-top: 10px;">Access to knowledge is access to the future.</p>
+    <p>&copy; 2026 Bal Bharati Public School [cite: 1]</p>
+    <p style="font-size: 0.8rem; margin-top: 10px;">Education is the movement from darkness to light.</p>
 </footer>
 
 <script>
     const resources = [
-        // --- STUDENTS ---
-        { title: "DIKSHA Portal", desc: "National platform for school education. Access NCERT textbooks and QR-coded digital lessons.", cat: "student", url: "https://diksha.gov.in/" },
-        { title: "e-Pathshala", desc: "A joint initiative of Ministry of Education and NCERT. Free access to all educational e-resources.", cat: "student", url: "https://epathshala.nic.in/" },
-        { title: "Khan Academy India", desc: "World-class practice exercises and instructional videos for Math and Science (NCERT mapped).", cat: "student", url: "https://hi.khanacademy.org/" },
-        { title: "Amrita Virtual Labs", desc: "Interactive simulations for Physics, Chemistry, and Biology experiments for classes 9-12.", cat: "student", url: "https://vlab.amrita.edu/" },
-        { title: "StoryWeaver", desc: "A massive open-source library of multilingual storybooks for primary and middle school students.", cat: "student", url: "https://storyweaver.org.in/" },
-        { title: "National Digital Library", desc: "A virtual repository of learning resources with millions of books, hosted by IIT Kharagpur.", cat: "student", url: "https://ndl.iitkgp.ac.in/" },
+        // --- CURRICULUM SUPPORT ---
+        { title: "CBSE Manuals", desc: "Official academic manuals for secondary education.", cat: "Curriculum", url: "https://cbseacademic.nic.in/manual.html" },
+        { title: "CBSE Curriculum 2023", desc: "Current curriculum and syllabus updates.", cat: "Curriculum", url: "https://cbseacademic.nic.in/curriculum_2023.html" },
+        { title: "CBSE Circulars", desc: "Latest notifications and academic circulars.", cat: "Curriculum", url: "https://cbseacademic.nic.in/circulars.html" },
+        { title: "NCERT Text Books", desc: "Digital copies of primary and secondary textbooks.", cat: "Curriculum", url: "https://ncert.nic.in/textbook.php" },
+        { title: "NEP Policy", desc: "National Education Policy final document.", cat: "Curriculum", url: "https://www.education.gov.in/sites/upload_files/mhrd/files/NEP_Final_English_0.pdf" },
+        { title: "NIPUN BHARAT", desc: "National initiative for proficiency in reading and numeracy.", cat: "Curriculum", url: "https://nipunbharat.education.gov.in/" },
 
-        // --- MAGAZINES ---
-        { title: "Science Reporter", desc: "India's most popular science monthly magazine published by CSIR-NIScPR.", cat: "magazines", url: "https://niscpr.res.in/periodicals/science-reporter" },
-        { title: "Teacher Plus", desc: "A magazine that fosters a sense of community among teachers and creative learners.", cat: "magazines", url: "https://www.teacherplus.org/" },
-        { title: "Down To Earth", desc: "Leading magazine on environmental issues, health, and sustainable development.", cat: "magazines", url: "https://www.downtoearth.org.in/" },
-        { title: "Nat Geo Kids", desc: "Interactive digital resources for young explorers interested in wildlife and geography.", cat: "magazines", url: "https://kids.nationalgeographic.com/" },
-        { title: "Children's World", desc: "One of the oldest magazines for children to encourage creative writing and reading.", cat: "magazines", url: "https://www.childrensworld.org.in/" },
+        // --- STORY TIME / READING ---
+        { title: "Storyline Online", desc: "Children's literacy resource with celebrated actors reading aloud.", cat: "Story Time", url: "https://www.storylineonline.net/" },
+        { title: "StoryMirror", desc: "Platform for creative writing and reading short stories.", cat: "Story Time", url: "https://storymirror.com" },
+        { title: "Storyweaver", desc: "Multilingual stories for children to read and enjoy.", cat: "Story Time", url: "https://storyweaver.org.in/en/" },
+        { title: "Hindi Story Time", desc: "A collection of motivational and fun stories in Hindi.", cat: "Story Time", url: "https://motivationalstoryinhindi.com/story-for-kids-in-hindi/" },
+        { title: "e-Pustakalay", desc: "Extensive library for Hindi digital books.", cat: "Story Time", url: "https://epustakalay.com/" },
 
-        // --- TEACHERS ---
-        { title: "CBSE Academic", desc: "Latest circulars, curriculum updates, and teacher manuals for CBSE affiliation.", cat: "teacher", url: "https://cbseacademic.nic.in/" },
-        { title: "NROER", desc: "National Repository for Open Educational Resources. Repository for documents, audio, and videos.", cat: "teacher", url: "https://nroer.gov.in/" },
-        { title: "NISHTHA Training", desc: "National Initiative for School Heads' and Teachers' Holistic Advancement.", cat: "teacher", url: "https://itpd.ncert.gov.in/" },
-        { title: "OER Commons", desc: "Public digital library of open educational resources for curriculum planning.", cat: "teacher", url: "https://www.oercommons.org/" },
+        // --- REFERENCE ---
+        { title: "Encyclopedia Britannica", desc: "World-renowned source for facts and reference materials.", cat: "Reference", url: "https://www.britannica.com/" },
+        { title: "World History Encyclopedia", desc: "Resource for ancient, medieval, and modern history.", cat: "Reference", url: "https://www.worldhistory.org/" },
+        { title: "Biography Online", desc: "Profiles of influential people throughout history.", cat: "Reference", url: "https://www.biographyonline.net/" },
+        { title: "Oxford Owl", desc: "Free ebooks and support for reading and math.", cat: "Reference", url: "https://www.oxfordowl.co.uk/" },
 
-        // --- EXAMS ---
-        { title: "Sample Papers (X/XII)", desc: "Download the latest board exam sample question papers and marking schemes.", cat: "exams", url: "https://cbseacademic.nic.in/sqp_classx_2024-25.html" },
-        { title: "CBSE Question Bank", desc: "Official question bank focusing on Case-study and Competency-based questions.", cat: "exams", url: "https://cbseacademic.nic.in/qb10.html" },
-        { title: "Pariksha Pe Charcha", desc: "Valuable tips for students and parents to manage exam stress from PM India.", cat: "exams", url: "https://innovateindia.mygov.in/ppc-2026/" }
+        // --- TRAINING ---
+        { title: "DIKSHA Portal", desc: "National training and resource portal for teachers.", cat: "Training", url: "https://diksha.gov.in/index.html" },
+        { title: "NISHTHA Training", desc: "Teacher training for holistic development.", cat: "Training", url: "https://www.india.gov.in/spotlight/nishtha" },
+        { title: "SWAYAM", desc: "Online courses and certifications for various disciplines.", cat: "Training", url: "https://swayam.gov.in/explorer" },
+
+        // --- NEWS & MAGAZINES ---
+        { title: "The Hindu", desc: "Digital edition of The Hindu newspaper.", cat: "News", url: "https://www.thehindu.com/" },
+        { title: "Indian Express", desc: "Latest news and investigative journalism.", cat: "News", url: "https://indianexpress.com/" },
+        { title: "National Geographic", desc: "Science, nature, and geography magazine.", cat: "News", url: "https://www.nationalgeographic.com/magazine/" },
+        { title: "India Today", desc: "Weekly news magazine and current affairs.", cat: "News", url: "https://www.indiatoday.in" },
+
+        // --- PAID RESOURCES ---
+        { title: "British Council Library", desc: "Access to world-class digital learning materials.", cat: "Paid", url: "https://www.britishcouncil.in/library/digital-library" }
     ];
 
     function getCatColor(cat) {
         switch(cat) {
-            case 'teacher': return '#059669';   // Emerald
-            case 'exams': return '#dc2626';     // Red
-            case 'magazines': return '#d97706'; // Amber
-            default: return '#7c3aed';          // Purple
+            case 'Curriculum': return '#059669'; 
+            case 'Story Time': return '#7c3aed';
+            case 'Reference': return '#2563eb';
+            case 'Training': return '#db2777';
+            case 'News': return '#d97706';
+            default: return '#64748b';
         }
     }
 
     function displayResources(data) {
         const grid = document.getElementById('libraryGrid');
-        
         if (data.length === 0) {
-            grid.innerHTML = `
-                <div style="grid-column: 1/-1; text-align: center; padding: 4rem;">
-                    <span style="font-size: 4rem;">🔍</span>
-                    <h3 style="color: var(--text-muted); margin-top: 1rem;">No resources found matching your search.</h3>
-                    <p>Try using different keywords like "NCERT", "Physics", or "Board".</p>
-                </div>`;
+            grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 4rem;"><h3>No results found.</h3></div>`;
             return;
         }
-
         grid.innerHTML = data.map(res => `
             <div class="card">
-                <span class="badge" style="background:${getCatColor(res.cat)}15; color:${getCatColor(res.cat)}">
-                    ${res.cat}
-                </span>
+                <span class="badge" style="background:${getCatColor(res.cat)}15; color:${getCatColor(res.cat)}">${res.cat}</span>
                 <h3>${res.title}</h3>
                 <p>${res.desc}</p>
-                <a href="${res.url}" target="_blank" class="visit-btn">Open Resource</a>
+                <a href="${res.url}" target="_blank" class="visit-btn">Visit Website</a>
             </div>
         `).join('');
     }
 
     function filterCategory(category, btn) {
-        // UI Update
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-
-        // Logic
         if(category === 'all') {
             displayResources(resources);
         } else {
@@ -294,13 +289,11 @@
         const term = document.getElementById('searchInput').value.toLowerCase();
         const filtered = resources.filter(res => 
             res.title.toLowerCase().includes(term) || 
-            res.desc.toLowerCase().includes(term) ||
             res.cat.toLowerCase().includes(term)
         );
         displayResources(filtered);
     }
 
-    // Initial Display
     displayResources(resources);
 </script>
 
